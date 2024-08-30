@@ -23,11 +23,21 @@ export class UserFormComponent {
       next: (response) => {
         console.log('User added successfully:', response); // Success message
         alert('User added successfully!');
+
+        this.resetForm();
       },
       error: (error) => {
         console.error('Error adding user:', error); // Error handling
         alert('Error adding user.');
       },
     });
+  }
+
+  resetForm(): void {
+    this.user = {
+      firstName: '',
+      lastName: '',
+      dateOfBirth: '',
+    };
   }
 }
