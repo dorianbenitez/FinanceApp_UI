@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { User } from 'src/app/model/user';
+import { UploadUser } from 'src/app/model/uploadUser';
 import { UserService } from 'src/app/services/user-service.service';
 
 @Component({
@@ -10,19 +10,24 @@ import { UserService } from 'src/app/services/user-service.service';
 })
 export class UserFormComponent {
 
-  user: User;
+  user: UploadUser = {
+    firstName: '',
+    lastName: '',
+    dateOfBirth: '',
+  };
 
-  constructor(
-    private route: ActivatedRoute, 
-      private router: Router, 
-        private userService: UserService) {
-  }
+  constructor(private userService: UserService) {}
 
-  onSubmit() {
-    this.userService.save(this.user).subscribe(result => this.gotoUserList());
-  }
-
-  gotoUserList() {
-    this.router.navigate(['/users']);
+  onSubmit(): void {
+    this.userService.save(this.user).subscribe({
+      next: (response) => {
+        console.log('User added successfully:', response); // Success message
+        alert('User added successfully!');
+      },
+      error: (error) => {
+        console.error('Error adding user:', error); // Error handling
+        alert('Error adding user.');
+      },
+    });
   }
 }
