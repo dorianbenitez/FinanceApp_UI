@@ -1,0 +1,61 @@
+body {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.navbar {
+    background: #fff;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-bottom: 1px solid #dfe3e8;
+    border-radius: 0;
+}
+
+.navbar .navbar-brand {
+    padding-left: 0;
+    font-size: 20px;
+    padding-right: 50px;
+}
+
+.navbar .navbar-brand b {
+    color: #33cabb;
+}
+
+.navbar .nav-link {
+    color: #888;
+    font-size: 15px;
+}
+
+.navbar .nav-link.active {
+    color: #33cabb;
+}
+
+.navbar .sign-up-btn {
+    min-width: 110px;
+    max-height: 36px;
+}
+
+.navbar .btn-primary, .navbar .btn-primary:active {
+    color: #fff;
+    background: #33cabb !important;
+    border: none;
+}
+
+.navbar .btn-primary:hover, .navbar .btn-primary:focus {
+    color: #fff;
+    background: #31bfb1 !important;
+}
+
+.navbar .action-buttons .nav-link {
+    color: #888;
+    font-size: 15px;
+}
+
+.navbar .action-buttons .btn-primary {
+    min-width: 110px;
+}
+
+@media (max-width: 768px) {
+    .navbar .action-buttons {
+        margin-top: 10px;
+    }
+}
