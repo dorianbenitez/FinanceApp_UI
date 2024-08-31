@@ -11,9 +11,11 @@ import { UserService } from 'src/app/services/user-service.service';
 export class UserFormComponent {
 
   user: UploadUser = {
+    email: '',
     firstName: '',
     lastName: '',
     dateOfBirth: '',
+    password: '',
   };
 
   constructor(private userService: UserService) {}
@@ -35,9 +37,11 @@ export class UserFormComponent {
 
   resetForm(): void {
     this.user = {
+      email: '',
       firstName: '',
       lastName: '',
       dateOfBirth: '',
+      password: '',
     };
   }
 }
