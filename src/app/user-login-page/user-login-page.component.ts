@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-// import { UploadUser } from '../model/uploadUser';
 import { UserService } from '../services/user-service.service';
 import { UserLogin } from '../model/userLogin';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-user-login-page',
@@ -15,13 +15,14 @@ export class UserLoginPageComponent {
     password: '',
   };
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private router: Router) {}
 
   onSubmit(): void {
     this.userService.login(this.user).subscribe({
       next: (response) => {
         console.log('User logged in successfully:', response); // Success message
         alert('User logged in successfully!');
+        this.router.navigate(['/landingPage']);
       },
       error: (error) => {
         console.error('Error logging in for user:', error); // Error handling

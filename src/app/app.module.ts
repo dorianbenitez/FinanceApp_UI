@@ -9,6 +9,8 @@ import { UserFormComponent } from './user-form/user-form/user-form.component';
 import { UserService } from './services/user-service.service';
 import { HomepageNavbarComponent } from './homepage-navbar/homepage-navbar.component';
 import { UserLoginPageComponent } from './user-login-page/user-login-page.component';
+import { LandingPageComponent } from './user-landing-page/landing-page.component';
+import { GeneralLandingPageComponent } from './general-landing-page/general-landing-page.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { UserLoginPageComponent } from './user-login-page/user-login-page.compon
     UserListComponent,
     UserFormComponent,
     HomepageNavbarComponent,
-    UserLoginPageComponent
+    UserLoginPageComponent,
+    LandingPageComponent,
+    GeneralLandingPageComponent
   ],
   imports: [
     BrowserModule,
