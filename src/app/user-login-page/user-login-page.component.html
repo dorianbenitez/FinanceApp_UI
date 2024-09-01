@@ -1,0 +1,25 @@
+<div class="login-container">
+    <div class="login-message">
+      <h1>🔐 Welcome Back to FinanceApp!</h1>
+      <p>Log in to your account to manage your finances easily and securely.</p>
+    </div>
+  
+    <form class="login-form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="email">📧 Email Address</label>
+        <input type="email" [(ngModel)]="user.email"  id="email" name ="email" placeholder="Enter your email address" required>
+      </div>
+
+
+      <div class="form-group">
+        <label for="password">🔒 Password</label>
+        <input type="password" [(ngModel)]="user.password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+  
+      <div class="button-group">
+        <button type="submit" class="login-btn">Log In</button>
+        <!-- <a href="#" class="forgot-password">Forgot Password?</a> -->
+      </div>
+    </form>
+  </div>
+  

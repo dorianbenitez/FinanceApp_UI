@@ -1,0 +1,54 @@
+<div class="dashboard-container">
+    <header class="header">
+      <h1>Welcome to Your Finance Dashboard</h1>
+      <p>Track your income, expenses, credit score, investments, and net worth all in one place.</p>
+    </header>
+  
+    <!-- Overview Section -->
+    <section class="overview-section">
+      <div class="card">
+        <h2>Total Income</h2>
+        <p>$5,000.00</p>
+        <button (click)="addTransaction()">Add Income</button>
+      </div>
+      <div class="card">
+        <h2>Total Expenses</h2>
+        <p>$3,200.00</p>
+        <button (click)="addTransaction()">Add Expense</button>
+      </div>
+      <div class="card">
+        <h2>Net Worth</h2>
+        <p>$50,000.00</p>
+      </div>
+    </section>
+  
+    <!-- Credit Score Section -->
+    <section class="credit-score-section">
+      <h2>Your Credit Score</h2>
+      <div class="credit-score-gauge">
+        <span>720</span> <!-- Placeholder for a visual gauge -->
+      </div>
+    </section>
+  
+    <!-- Investment Portfolio Section -->
+    <section class="investment-section">
+      <h2>Investment Portfolio</h2>
+      <div class="investment-card">
+        <p>Stocks: $10,000</p>
+        <p>Crypto: $5,000</p>
+        <button (click)="manageInvestments()">Manage Investments</button>
+      </div>
+    </section>
+  
+    <!-- Financial Chart Section -->
+    <section class="chart-section">
+      <h2>Income vs. Expenses</h2>
+      <div id="chart" class="chart-container"></div> <!-- Placeholder for charts -->
+    </section>
+  
+    <footer class="footer">
+      <button (click)="viewReports()">View Reports</button>
+      <button (click)="settings()">Settings</button>
+    </footer>
+  </div>
+  
