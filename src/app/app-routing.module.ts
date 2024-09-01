@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'adduser', component: UserFormComponent },
   { path: 'navbar', component: HomepageNavbarComponent},
   { path: 'loginPage', component: UserLoginPageComponent},
-  { path: 'generalLandingPage', component: GeneralLandingPageComponent},
+  { path: '', component: GeneralLandingPageComponent},
 ];
 
 @NgModule({
